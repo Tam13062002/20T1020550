@@ -1,0 +1,73 @@
+﻿@model _20T1020550.DomainModels.Employee
+@{
+    ViewBag.Title = $"Xóa nhân viên: {Model.LastName} {Model.FirstName} ";
+}
+
+<div class="box box-primary">
+    <div class="box box-body">
+        <form class="form-horizontal" action="~/Employee/Delete/@Model.EmployeeID" method="post">
+            <div class="form-group">
+                <label class="control-label col-sm-2">Họ:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">Đoàn </p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Họ:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">@Model.LastName</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Tên:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">@Model.FirstName</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Ngày sinh:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">@Model.BirthDate</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Ảnh:</label>
+                <div class="col-sm-10">
+                    <div class="el-card-item">
+                        <div class="el-card-avatar el-overlay-1" ; style="margin-top: 8px">
+                            <img src="@Model.Photo" alt="employee photo">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Ghi chú:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">@Model.Notes</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">@Model.Email</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i>Xóa dữ liệu</button>
+                        <a href="~/Employee" class="btn btn-warning">Quay lại</a>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+
